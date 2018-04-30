@@ -1,4 +1,10 @@
-﻿// Description: --
+﻿// AUTHOR: Nicholas Benyo
+// FILENAME: EncryptWord.cs
+// DATE: 2018-04-29
+// REVISION HISTORY:  1.0
+// REFERENCES (optional): Design extracted from original EncryptWord.h/Encryptword.cpp submitted in CPSC 5011
+
+// Description: --
 // EncryptWord is designed for a simple Caesar Cipher game. Words are shifted
 // by an integer ranging from 1 to 25. Word can be set, encrypted, decrypted,
 // reset, status can be checked to meet assumptions, and statistics can be
@@ -6,6 +12,10 @@
 // appropriate shift. Shift and word are purposefully obscured from user
 // until guessed correctly. Statistics are generated on the number of times
 // guessWord() is called and the result of integer passed through the function.
+// Object state - The object state is teh status data member. An object will 
+// be in state 1 when the object is currently encrypted and the shift has not
+// been correctly called using the guessWord() method. After the integer has been
+// passed through, the state will change until the word is reset.
 //
 // Assumptions:
 // -Words passed to the object using setWord() are comprised of only chars a-z
